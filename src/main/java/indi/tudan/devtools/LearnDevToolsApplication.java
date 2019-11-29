@@ -1,9 +1,10 @@
 package indi.tudan.devtools;
 
-import indi.tudan.devtools.processor.YmlProcessor;
+import indi.tudan.devtools.processor.YamlProcessor;
 import indi.tudan.devtools.utils.SpringBeanUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 /**
  * 程序入口类
@@ -13,13 +14,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 1.0
  */
 @SpringBootApplication
+@EnableConfigurationProperties
 public class LearnDevToolsApplication {
 
     public static void main(String[] args) {
 
         SpringApplication.run(LearnDevToolsApplication.class, args);
 
-        SpringBeanUtils.getBean(YmlProcessor.class).start();
+        SpringBeanUtils.getBean(YamlProcessor.class).start();
 
     }
 

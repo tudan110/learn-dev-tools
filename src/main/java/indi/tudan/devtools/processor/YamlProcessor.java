@@ -1,6 +1,6 @@
 package indi.tudan.devtools.processor;
 
-import indi.tudan.devtools.common.TestYml;
+import indi.tudan.devtools.common.TestYaml;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -14,10 +14,10 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @EnableConfigurationProperties
-public class YmlProcessor {
+public class YamlProcessor {
 
     @Autowired
-    private TestYml testYml;
+    private TestYaml testYaml;
 
     /**
      * 执行
@@ -26,6 +26,6 @@ public class YmlProcessor {
      */
     public void start() {
 
-        System.out.println(testYml.toString());
+        System.out.println(testYaml.toString());
     }
 }

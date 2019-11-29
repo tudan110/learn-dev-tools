@@ -74,6 +74,7 @@ public class SpringBeanUtils implements ApplicationContextAware {
      * @param clazz    已注入对象的类类型对象
      * @param <T>      泛型
      * @return 已注入泛型对象
+     * @date 2019年06月25日 16:06:53
      */
     public static <T> T getBean(String beanName, Class<T> clazz) {
         return applicationContext.getBean(beanName, clazz);
