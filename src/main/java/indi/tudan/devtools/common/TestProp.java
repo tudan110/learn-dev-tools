@@ -1,15 +1,15 @@
 package indi.tudan.devtools.common;
 
-import indi.tudan.devtools.spring.core.io.support.YamlPropertySourceFactory;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.io.support.DefaultPropertySourceFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 /**
- * yaml 配置映射类
+ * prop 配置映射类
  *
  * @author wangtan
  * @date 2019-11-28 17:26:39
@@ -18,14 +18,14 @@ import java.util.List;
 @Data
 @Component
 @PropertySource(
-        name = "test.yml",
-        value = {"classpath:config/test.yml"},
+        name = "test.properties",
+        value = {"classpath:config/test.properties"},
         ignoreResourceNotFound = false,
         encoding = "UTF-8",
-        factory = YamlPropertySourceFactory.class
+        factory = DefaultPropertySourceFactory.class
 )
-@ConfigurationProperties(prefix = "yaml")
-public class TestYaml {
+@ConfigurationProperties(prefix = "prop")
+public class TestProp {
 
     private String name;
 

@@ -1,5 +1,6 @@
 package indi.tudan.devtools;
 
+import indi.tudan.devtools.processor.PropProcessor;
 import indi.tudan.devtools.processor.YamlProcessor;
 import indi.tudan.devtools.utils.SpringBeanUtils;
 import org.springframework.boot.SpringApplication;
@@ -22,6 +23,8 @@ public class LearnDevToolsApplication {
         SpringApplication.run(LearnDevToolsApplication.class, args);
 
         SpringBeanUtils.getBean(YamlProcessor.class).start();
+
+        SpringBeanUtils.getBean(PropProcessor.class).start();
 
     }
 

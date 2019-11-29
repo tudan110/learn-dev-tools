@@ -1,3 +1,9 @@
-test:
+yaml:
   name: wangtan
   age: 26
+  # 可以用 数组 或 List 接收
+  pc: lenovo,dell
+  # 可以用 数组 或 List 接收
+  hobby:
+    - lol
+    - coding

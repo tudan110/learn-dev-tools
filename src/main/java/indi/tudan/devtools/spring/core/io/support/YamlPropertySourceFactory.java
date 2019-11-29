@@ -33,7 +33,7 @@ public class YamlPropertySourceFactory implements PropertySourceFactory {
     @Override
     public PropertySource<?> createPropertySource(@Nullable String name, EncodedResource resource) throws IOException {
 
-        //
+        // 返回 yaml 属性资源
         return new YamlPropertySourceLoader()
                 .load(resource.getResource().getFilename(), resource.getResource())
                 .get(0);
